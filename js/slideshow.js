@@ -5,9 +5,16 @@ let slideIndex = 0;
 let lastSlide = slides.length - 1;
 
 previousButton.addEventListener("click", previousSlide);
+document.addEventListener("keydown", (e) => {
+  if (e.key === "ArrowLeft") {
+    previousSlide();
+  } else if (e.key === "ArrowRight") {
+    nextSlide();
+  } else {
+    return;
+  }
+});
 nextButton.addEventListener("click", nextSlide);
-
-console.log(slides);
 
 const initializeSlide = () => {
   if (slides.length > 0) {
@@ -31,7 +38,6 @@ function previousSlide() {
     slideIndex--;
   }
   showSlide(slideIndex);
-  console.log(slideIndex);
 }
 
 function nextSlide() {
@@ -41,5 +47,4 @@ function nextSlide() {
     slideIndex++;
   }
   showSlide(slideIndex);
-  console.log(slideIndex);
 }
