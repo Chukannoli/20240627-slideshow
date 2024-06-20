@@ -8,6 +8,7 @@
 .slideshow__slide {
   position: absolute;
   max-width: 450px;
+  height: 100%;
   left: 50%;
   transform: translate(-50%);
   display: none;
@@ -43,7 +44,7 @@
   display: flex;
   justify-content: center;
   padding: 1rem;
-  bottom: 5px;
+  bottom: -2px;
 }
 
 .active {
